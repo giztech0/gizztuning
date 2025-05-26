@@ -1,147 +1,136 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Untitled Page</title>
-<meta name="generator" content="WYSIWYG Web Builder 17 Trial Version - https://www.wysiwygwebbuilder.com">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="flexible_layout.css" rel="stylesheet">
-<link href="page3.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <title>Autodijagnostika</title>
+  <meta name="generator" content="WYSIWYG Web Builder 17 Trial Version - https://www.wysiwygwebbuilder.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      background: #f5f6fa;
+      color: #222;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+    .main-nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      background: #1e90ff;
+      padding: 18px 0;
+      border-radius: 0 0 18px 18px;
+      margin-bottom: 32px;
+    }
+    .main-nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: 1px;
+      transition: color .2s;
+    }
+    .main-nav a:hover {
+      color: #ffd700;
+    }
+    .device-section {
+      display: flex;
+      flex-wrap: wrap;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      margin: 24px auto;
+      max-width: 950px;
+      padding: 32px;
+      align-items: center;
+      transition: box-shadow .2s;
+    }
+    .device-section:hover {
+      box-shadow: 0 4px 24px rgba(30,144,255,0.16);
+    }
+    .device-info {
+      flex: 1 1 340px;
+      padding-right: 24px;
+    }
+    .device-image {
+      flex: 0 0 320px;
+      text-align: center;
+    }
+    .device-image img {
+      max-width: 260px;
+      border-radius: 8px;
+      border: 1px solid #eee;
+      background: #fafbfc;
+      padding: 6px;
+      transition: transform .2s;
+    }
+    .device-image img:hover {
+      transform: scale(1.07);
+    }
+    .device-btn {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 10px 24px;
+      background: #1e90ff;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 0 2px 8px rgba(30,144,255,0.10);
+      transition: background .2s, box-shadow .2s;
+    }
+    .device-btn:hover {
+      background: #1565c0;
+      box-shadow: 0 4px 20px rgba(30,144,255,0.18);
+    }
+    @media (max-width: 800px) {
+      .device-section { flex-direction: column; padding: 18px;}
+      .device-info { padding-right: 0; margin-bottom: 14px;}
+      .device-image { width: 100%; }
+      .main-nav { flex-direction: column; gap: 10px; border-radius: 0 0 12px 12px;}
+    }
+    /* Scroll to top button */
+    #toTop {
+      display: none;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 99;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      background: #1e90ff;
+      color: white;
+      cursor: pointer;
+      padding: 12px 16px;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(30,144,255,0.10);
+      transition: background .2s;
+    }
+    #toTop:hover {
+      background: #1565c0;
+    }
+  </style>
 </head>
 <body>
-   <a href="https://www.wysiwygwebbuilder.com" target="_blank"><img src="images/builtwithwwb17.png" alt="WYSIWYG Web Builder" style="position:absolute;left:441px;top:967px;margin:0;border-width:0;z-index:250" width="16" height="16"></a>
-   <div id="wb_LayoutGrid3">
-      <div id="LayoutGrid3">
-         <div class="row">
-            <div class="col-1">
-               <div id="wb_Text4">
-                  <p style="font-size:13px;"><span style="font-size:27px;line-height:30px;font-weight:bold;">Autel MaxiDiag MD808 Pro</span></p>
-                  <p style="font-size:13px;">&nbsp;</p>
-                  <p style="font-size:13px;">&nbsp;</p>
-                  <ul style="font-size:13px;list-style-type:disc;">
-                     <li style="margin:0 0 0 24px;">Čitanje i brisanje grešaka sa SVIH sustava u automobilu
-                     </li>
-                     <li style="margin:0 0 0 24px;">Čitanje parametara / live data podataka sa svih sustava
-                     </li>
-                     <li style="margin:0 0 0 24px;">Resetiranje servisnih intervala, gašenje lampice, podešavanje idućeg servisa
-                     </li>
-                     <li style="margin:0 0 0 24px;">Resetiranje BMS sustava i registracija nove baterije/akumulatora
-                     </li>
-                     <li style="margin:0 0 0 24px;">DPF / FAP regeneracija i praćenje parametara
-                     </li>
-                     <li style="margin:0 0 0 24px;">Resetiranje i kalibracija senzora kuta upravljača (SAS)
-                     </li>
-                     <li style="margin:0 0 0 24px;">Servis i resetiranje sustava elektroničkih parkirnih kočnica (EPB)
-                     </li>
-                     <li style="margin:0 0 0 24px;">Resetiranje i kalibracija klapne gasa (Throttle Matching)
-                     </li>
-                     <li style="margin:0 0 0 24px;">OBDII funkcije, I/M status spremnosti za tehnički pregled, test komponenti
-                     </li>
-                     <li style="margin:0 0 0 24px;">Ispis dijagnostičkog izvješća preko PC računala
-                     </li>
-                     <li style="margin:0 0 0 24px;">Podrška za Europske, Azijske i Američke modele vozila
-                     </li>
-                     <li style="margin:0 0 0 24px;">Besplatna doživotna nadogradnja softvera uređaja preko interneta
-                     </li>
-                  </ul>
-               </div>
-            </div>
-            <div class="col-2">
-               <div id="wb_Image5" style="display:inline-block;width:100%;height:auto;z-index:1;">
-                  <img src="images/autel-md808pro-glavna.jpg" id="Image5" alt="" width="455" height="455">
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-   <div id="wb_LayoutGrid1">
-      <div id="LayoutGrid1">
-         <div class="row">
-            <div class="col-1">
-               <div id="wb_Text1">
-                  <p style="font-size:13px;line-height:16px;"><span style="font-size:27px;line-height:30px;font-weight:bold;">AUTEL MaxiPRO MP808 profi autodijagnostika</span></p>
-                  <p style="font-size:13px;line-height:16px;">&nbsp;</p>
-                  <p style="font-size:13px;line-height:16px;">&nbsp;</p>
-                  <p style="font-size:13px;line-height:16px;">Autel MaxiPRO MP808 je profesionalni višenamjenski Bi-directional sustav za autodijagnostiku svih vrsta automobila baziran na Android operativnom sustavu i brzom Samsung Exynos 6-core procesoru. MP808 je nadograđena i poboljšana verzija ranijeg popularnog Autelovog modela DS808 koji se je dokazao u mnogim radionama širom&nbsp; svijeta.</p>
-               </div>
-            </div>
-            <div class="col-2">
-               <div id="wb_Image1" style="display:inline-block;width:100%;height:auto;z-index:3;">
-                  <img src="images/autel-maxipro-mp808-glavna (1).jpg" id="Image1" alt="" width="455" height="455">
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-   <div id="wb_LayoutGrid8">
-      <div id="LayoutGrid8">
-         <div class="row">
-            <div class="col-1">
-               <div id="wb_Text9">
-                  <span style="color:#000000;font-family:Arial;font-size:27px;line-height:30px;"><strong>OPEL USB dijagnostika 1990-2011<br><br></strong></span><span style="color:#000000;font-family:Arial;font-size:13px;line-height:15px;"><br><br></span><span style="color:#000000;font-family:Arial;font-size:15px;line-height:17px;">Napredna autodijagnostika za Opel vozila proizvedena od 1990 do 2011 godine kompatibilna sa OP-COM programom.</span>
-               </div>
-            </div>
-            <div class="col-2">
-               <div id="wb_Image10" style="display:inline-block;width:100%;height:auto;z-index:5;">
-                  <img src="images/opel-2011.png" id="Image10" alt="" width="455" height="455">
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-   <div id="wb_LayoutGrid2">
-      <div id="LayoutGrid2">
-         <div class="row">
-            <div class="col-1">
-               <div id="wb_Text2">
-                  <span style="color:#000000;font-family:Arial;font-size:27px;line-height:30px;"><strong>OPEL USB dijagnostika 1990-2016 (OPCOM kompatibilna)<br><br></strong></span><span style="color:#000000;font-family:Arial;font-size:13px;line-height:15px;"><br><br></span><span style="color:#000000;font-family:Arial;font-size:15px;line-height:17px;">Sa OP-COM programom moguće je pristupati svim sistemima u vozilu. Od motora, preko airbaga i ABS-a, do kontrolera klime, svijetala, centralnog zaključavanja i sl. Interfejs podržava rad sa starijim sistemima koji koriste K linije, gdje ugrađeni multiplexer automatski prebacuju aktivnu liniju na potrebni pin konektora. Naravno podržani su i novi sistemi sa CAN-BUS vezom koji se koriste u novijim vozilima kao što su Vectra C, Astra H, Insignia, Antara i sl. SW, MS i HS CAN rade u punom profilu.</span>
-               </div>
-            </div>
-            <div class="col-2">
-               <div id="wb_Image8" style="display:inline-block;width:100%;height:auto;z-index:7;">
-                  <img src="images/opcom2016.jpg" id="Image8" alt="" width="455" height="455">
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-   <div id="wb_LayoutGrid6">
-      <div id="LayoutGrid6">
-         <div class="row">
-            <div class="col-1">
-               <div id="wb_Text6">
-                  <p style="font-size:13px;line-height:16px;"><span style="font-size:27px;line-height:30px;font-weight:bold;">Super VAG 2.0</span></p>
-                  <p style="font-size:13px;line-height:16px;">&nbsp;</p>
-                  <p style="font-size:13px;line-height:16px;">Ovaj proizvod se može koristiti za korekciju brojača kilometara, čitanje sigurnosnog pristupnog koda, programator ključeva, alat za resetiranje zračnog jastuka, aktivaciju TV-a i dijagnostiku za VW Passat, VW, VW Bora, VW Polo, VW Golf, Ai A6, A-di A8, A -di A4, Škoda Superb, Škoda Octavia, Škoda Fabia automobili.</p>
-               </div>
-            </div>
-            <div class="col-2">
-               <div id="wb_Image2" style="display:inline-block;width:100%;height:auto;z-index:9;">
-                  <img src="images/13080820503838445.jpg" id="Image2" alt="" width="455" height="455">
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-   <div id="wb_LayoutGrid4">
-      <div id="LayoutGrid4">
-         <div class="row">
-            <div class="col-1">
-               <div id="wb_Text3">
-                  <p style="font-size:27px;line-height:30px;font-weight:bold;">(2022 ELITE VER)LAUCNH OBD2 skener&nbsp;&nbsp; <span style="background-color:#FFFFFF;font-size:21px;line-height:24.5px;">CRP909 </span></p>
-                  <p style="font-size:27px;line-height:30px;font-weight:bold;">&nbsp;</p>
-                  <p style="font-size:27px;line-height:30px;font-weight:bold;">&nbsp;</p>
-                  <p style="font-size:13px;line-height:16px;"><span style="background-color:#FFFFFF;">CRP909 </span><span style="background-color:#FFFFFF;">Čitač kodova automobila, Alat za dijagnostiku automobila svih sustava na razini OE, 26+ resetiranje IMMO ABS kodiranja injektora za krvarenje itd., Pametno skeniranje, ažuriranje jednim dodirom besplatno, ažuriranje CRP123/9</span></p>
-                  <p style="font-size:13px;line-height:16px;">&nbsp;</p>
-               </div>
-            </div>
-            <div class="col-2">
-               <div id="wb_Image3" style="display:inline-block;width:100%;height:auto;z-index:11;">
-                  <img src="images/29f0abed222198044e3398a1aa3a66dc.jpg" id="Image3" alt="" width="455" height="455">
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-</body>
-</html>
+  <nav class="main-nav">
+    <a href="index.html">Početna</a>
+    <a href="page2.html">Uređaji</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
+
+  <!-- Prvi uređaj -->
+  <div class="device-section">
+    <div class="device-info">
+      <h2>Autel MaxiDiag MD808 Pro</h2>
+      <ul>
+        <li>Čitanje i brisanje grešaka sa SVIH sustava u automobilu</li>
+        <li>Čitanje parametara / live data podataka sa svih sustava</li>
+        <li>Resetiranje servisnih intervala, gašenje lampice, podešavanje idućeg servisa</li>
+        <li>Resetiranje BMS sustava i registracija nove baterije/akumulatora</li>
+        <li>DPF / FAP regeneracija i praćenje parametara</li>
+        <li>Resetiranje i kalibracija senzora kuta upravljača (SAS)</li>
+        <li>Servis i resetiranje sustava elektroničkih parkirnih kočnica (EPB)</li>
+        <li>Resetiranje i kalibracija klapne gasa (Throttle Matching*
+
