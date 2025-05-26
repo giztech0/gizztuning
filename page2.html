@@ -7,19 +7,75 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="flexible_layout.css" rel="stylesheet">
 <link href="page2.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background: #f5f6fa;
+    color: #222;
+    line-height: 1.6;
+    padding: 30px 0 60px 0;
+  }
+  h2 {
+    margin-bottom: 16px;
+    font-size: 2rem;
+    color: #1e90ff;
+  }
+  .device-section {
+    display: flex;
+    flex-wrap: wrap;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin: 24px auto;
+    max-width: 950px;
+    padding: 32px;
+    align-items: center;
+    transition: box-shadow .2s;
+  }
+  .device-section:hover {
+    box-shadow: 0 4px 24px rgba(30,144,255,0.16);
+  }
+  .device-info {
+    flex: 1 1 340px;
+    padding-right: 24px;
+  }
+  .device-image {
+    flex: 0 0 320px;
+    text-align: center;
+  }
+  .device-image img {
+    max-width: 260px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    background: #fafbfc;
+    padding: 6px;
+    transition: transform .2s;
+  }
+  .device-image img:hover {
+    transform: scale(1.07);
+  }
+  @media (max-width: 800px) {
+    .device-section { flex-direction: column; padding: 18px;}
+    .device-info { padding-right: 0; margin-bottom: 14px;}
+    .device-image { width: 100%; }
+  }
+</style>
 </head>
 <body>
    <a href="https://www.wysiwygwebbuilder.com" target="_blank"><img src="images/builtwithwwb17.png" alt="WYSIWYG Web Builder" style="position:absolute;left:441px;top:967px;margin:0;border-width:0;z-index:250" width="16" height="16"></a>
    <div id="wb_LayoutGrid14">
       <div id="LayoutGrid14">
-         <div class="row">
-            <div class="col-1">
-               <div id="wb_Text14">
-                  <span style="color:#000000;font-family:Arial;font-size:27px;line-height:30px;"><strong>Delphi DS150e<br><br></strong></span><span style="color:#000000;font-family:Arial;font-size:13px;line-height:15px;"><br>Delphi DS150E i Autocom su profesionalni dijagnostički interfejsi koji omogućavaju brzu i pouzdanu dijagnostiku automobila i lakih komercijalnih vozila. Podržavaju veliki broj evropskih, azijskih i američkih proizvođača vozila i kompatibilni su sa OBD2 standardom.
-
-Pomoću ovih uređaja možete čitati i brisati greške, pratiti live podatke u realnom vremenu, testirati komponente, resetovati servise i još mnogo toga. Idealni su kako za profesionalne servisere, tako i za entuzijaste koji žele da održavaju svoje vozilo.</span>
-               </div>
-            </div>
+        <div class="device-section">
+  <div class="device-info">
+    <h2>Delphi DS150e</h2>
+    <p>Pomoću ovih uređaja možete čitati i brisati greške, pratiti live podatke u realnom vremenu, testirati komponente, resetovati servise i još mnogo toga. Idealni su kako za profesionalne servisere, tako i za hobiste.</p>
+  </div>
+  <div class="device-image">
+    <img src="delphi.jpg" alt="Delphi DS150e">
+  </div>
+</div>
             <div class="col-2">
                <div id="wb_Image18" style="display:inline-block;width:100%;height:auto;z-index:1;">
                   <img src="delphi.jpg" id="Image18" alt="" width="455" height="447">
